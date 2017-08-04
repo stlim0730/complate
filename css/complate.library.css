@@ -3,6 +3,8 @@
  * by Seongtaek Lim
  */
 
+
+
 /*
  * Sidebar
  */
@@ -74,6 +76,70 @@
   text-align: center;
 }
 
+
+
 /*
  * Slide
  */
+.slide {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+.slide h1,
+.slide .h1 {
+  color: inherit;
+  padding-top: initial;
+}
+.slide p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.slide > hr {
+  border-top-color: #d5d5d5;
+}
+.container .slide,
+.container-fluid .slide {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+.slide .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .slide {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .slide,
+  .container-fluid .slide {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .slide h1,
+  .slide .h1 {
+    font-size: 63px;
+  }
+}
+.slide.slide-default {
+  border: 1px solid #eee;
+}
+.slide.slide-info {
+  border: 1px solid #c4e3f3;
+  background-color: #eaf4f9;
+}
+.slide.slide-success {
+  border: 1px solid #dff0d8;
+  background-color: #edf4eb;
+}
+.slide.slide-danger {
+  border: 1px solid #ebcccc;
+  background-color: #f9eded;
+}
+.slide.slide-warning {
+  border: 1px solid #fcf8e3;
+  background-color: #f7f5ed;
+}
