@@ -1,2 +1,3 @@
-# cyoa
-Handmade Template-based Approach to Web Development Practice for Youth
+# Complate
+## Component + Template
+Template-Based Approach to Basic Web Development Practice for Youths
