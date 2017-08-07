@@ -6,16 +6,77 @@
 
 
 /*
+ * Landing
+ */
+.landing {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  min-height: 500px;
+}
+.landing h1,
+.landing .h1 {
+  color: inherit;
+  padding-top: initial;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container .landing,
+.container-fluid .landing {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+.landing .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .landing {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .landing,
+  .container-fluid .landing {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .landing h1,
+  .landing .h1 {
+    font-size: 63px;
+  }
+}
+.landing-body {
+  padding-top: 30px;
+  text-align: center;
+}
+.landing-btn {
+  margin-top: 50px;
+}
+.landing.landing-default {
+  border: 1px solid #eee;
+}
+.landing.landing-info {
+  border: 1px solid #c4e3f3;
+  background-color: #eaf4f9;
+}
+.landing.landing-success {
+  border: 1px solid #dff0d8;
+  background-color: #edf4eb;
+}
+.landing.landing-danger {
+  border: 1px solid #ebcccc;
+  background-color: #f9eded;
+}
+.landing.landing-warning {
+  border: 1px solid #fcf8e3;
+  background-color: #f7f5ed;
+}
+
+
+/*
  * Sidebar
  */
-
-/*div.sidebar {
-  position: fixed;
-  left: 0px;
-  height: 100%;
-  overflow-y: auto;
-}*/
-
 .sidebar {
   min-height: 20px;
   padding: 19px;
