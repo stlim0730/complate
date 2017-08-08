@@ -111,7 +111,7 @@
 }
 .sidebar .nav-pills > li {
   float: none;
-  display: inline-block;
+  display: block;
 }
 .sidebar .nav-pills {
   text-align: center;
