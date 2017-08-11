@@ -1,3 +1,6 @@
+// 
+// Written by Seongtaek Lim
+// 
 (function(){
   $('a').click(function(e) {
     // 
