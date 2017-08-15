@@ -20,7 +20,10 @@ var complate = window.complate;
       // Anchor link to a bookmark on the page
       e.preventDefault();
       var target = $(href);
-      var targetExists = target.length == 1;
+      var targetExists = target.length === 1;
+      if(!targetExists) {
+        return;
+      }
 
       $('html, body').animate({
         scrollTop: $(target).offset().top
@@ -133,6 +136,22 @@ var complate = window.complate;
     _updateData(name, value);
     _fillInData(name, value);
   });
+
+  // 
+  // Supporting Dynamic Links
+  $('button[data-dynamic-link]').click(function(e) {
+    e.preventDefault();
+
+    var scriptId = $(this).data('dynamic-link');
+    var scriptElem = $('#' + scriptId);
+    if(scriptElem.length !== 1) {
+      return;
+    }
+    var script = scriptElem.html();
+    var res = eval(script);
+    window.location.href = res;
+  });
+  // 
 
   // 
   // Entry point

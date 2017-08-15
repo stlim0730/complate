@@ -95,6 +95,9 @@
               <a class="list-group-item" href="#data-fill-ins">
                 Data Fill-Ins
               </a>
+              <a class="list-group-item" href="#dynamic-links">
+                Dynamic Links
+              </a>
             </div>
           </div>
         </div>
@@ -711,9 +714,9 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="select" class="col-lg-2 control-label">Selects</label>
+                        <label for="petSelect" class="col-lg-2 control-label">Selects</label>
                         <div class="col-lg-10">
-                          <select class="form-control complate-data" data-name="dropdown" id="select">
+                          <select class="form-control complate-data" data-name="pet" id="petSelect">
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="cow">Cow</option>
@@ -721,7 +724,7 @@
                             <option value="sheep">Sheep</option>
                           </select>
                           <br />
-                          <select multiple="" class="form-control complate-data" data-name="multipleSelects">
+                          <select multiple="" class="form-control complate-data" data-name="pets">
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="cow">Cow</option>
@@ -747,8 +750,8 @@
                     alert(complate.data.checkbox); // This gives you true or false.
                     alert(complate.data.optionsGroup);
                     console.log(complate.data.longText);
-                    console.log(complate.data.dropdown);
-                    console.log(complate.data.multipleSelect); // This gives you an array with multiple values.
+                    console.log(complate.data.pet);
+                    console.log(complate.data.pets); // This gives you an array with multiple values.
                   </script>
 
                   <script class="doc" type="text/template">
@@ -867,11 +870,44 @@
               <h1 data-fill-in="firstPresident">
                 George Washington
               </h1>
+
+              <script class="js" type="text/template">
+                // To retrive data from Complate storage
+                alert(complate.data.firstPresident);
+              </script>
+
+              <script class="doc" type="text/template">
+                <div>
+                  <p>
+                    You may (automatically) fill out <em>blanks</em> with user form data. To enable this data fill-in feature for an element, the element must specify the name of data in its <code>data-fill-in</code> attribute as the HTML example shows above.
+                  </p>
+                  <p>
+                     You may also directly use the data in your own Javascript code as the example above.
+                  </p>
+                </div>
+              </script>
             </div>
           </div>
           <div class="col-lg-4 col-md-4">
             <div class="bs-component">
               <button class="btn btn-default" data-fill-in="secondPresident">John Adams</button>
+
+              <script class="js" type="text/template">
+                // To retrive data from Complate storage
+                alert(complate.data.secondPresident);
+              </script>
+
+              <script class="doc" type="text/template">
+                <div>
+                  <p>
+                    You may (automatically) fill out <em>blanks</em> with user form data. To enable this data fill-in feature for an element, the element must specify the name of data in its <code>data-fill-in</code> attribute as the HTML example shows above.
+                  </p>
+                  <p>
+                     You may also directly use the data in your own Javascript code as the example above.
+                  </p>
+                </div>
+              </script>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-4">
@@ -879,10 +915,84 @@
               <p>
                 Lorem ipsum dolor sit amet, <span data-fill-in="thirdPresident" class="text-warning">Thomas Jefferson</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
+
+              <script class="js" type="text/template">
+                // To retrive data from Complate storage
+                alert(complate.data.thirdPresident);
+              </script>
+
+              <script class="doc" type="text/template">
+                <div>
+                  <p>
+                    You may (automatically) fill out <em>blanks</em> with user form data. To enable this data fill-in feature for an element, the element must specify the name of data in its <code>data-fill-in</code> attribute as the HTML example shows above.
+                  </p>
+                  <p>
+                     You may also directly use the data in your own Javascript code as the example above.
+                  </p>
+                </div>
+              </script>
+
             </div>
           </div>
         </div>
 
+      </div>
+
+
+
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="dynamic-links">Dynamic Link</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+            <div class="bs-component">
+              <div>
+                <select class="form-control complate-data" data-name="sports">
+                  <option value="">Select One</option>
+                  <option value="baseball">Baseball</option>
+                  <option value="football">Football</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="top">Back to Top</option>
+                </select>
+                <button class="btn btn-primary btn-block" data-dynamic-link="sports-router">Go</button>
+                <script id="sports-router" type="text/template">
+                  if(complate.data.sports == "baseball") {
+                    "https://www.google.com/search?q=baseball";
+                  }
+                  else if(complate.data.sports == "football") {
+                    "https://www.google.com/search?q=football";
+                  }
+                  else if(complate.data.sports == "basketball") {
+                    "https://www.google.com/search?q=basketball";
+                  }
+                  else if(complate.data.sports == "top") {
+                    "#top";
+                  }
+                  else {
+                    // Do nothing if it has unexpected value
+                  }
+                </script>
+              </div>
+
+              <script class="doc" type="text/template">
+                <div>
+                  <p>
+                    Dynamic link button can decide where to lead a user based on form data. You may either link url to a web page or hastag bookmark on the same page.
+                  </p>
+                  <p>
+                    The dynamic link button must have <code>id</code> of routing script in its <code>data-dynamic-link</code> attribute. Routing script must specify one or more locations where you want to place a user based on conditions.
+                  </p>
+                </div>
+              </script>
+            </div>
+          </div>
+        </div>
       </div>
 
 
