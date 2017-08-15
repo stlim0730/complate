@@ -12,7 +12,41 @@
   </head>
   
   <body>
-    <div class="container">
+
+    <!-- Navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Complate</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download" aria-expanded="false">Get Complate <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="#" target="_blank">Open Sandbox</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Get HTML Template</a></li>
+                <li><a href="#">Get complate.css</a></li>
+                <li><a href="#">Get complate.js</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Download ZIP</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Main Container -->
+    <div class="container" id="top">
       <div class="page-header" id="banner">
         
         <div class="row">
@@ -24,13 +58,13 @@
               Complate is a set of HTML code snippets with which you can start building a website. This library presents the elements you may copy &amp; paste to your own source code.
             </p>
             <p class="lead">
-              Some elements have detailed documentation on their behavior and how you make them work. Please read the documentation carefully.
+              Some components involve their own Javascript behavior. Please read the documentation carefully to learn how to properly make them work.
             </p>
             <p class="lead">
-              Complate is deeply inpired by a great project <a href="https://bootswatch.com/" target="_blank">Bootswatch</a> that helps beginners design web pages. It gives you source code for HTML elements and ready-to-use stylesheet based on <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a>, which are bolts and nuts in web page design.
+              Complate is deeply inpired by a great project <a href="https://bootswatch.com/" target="_blank">Bootswatch</a> that helps beginners design web pages. It gives you source code for HTML elements and ready-to-use stylesheet based on <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a>, which are bolts and nuts in designing web pages.
             </p>
             <p class="lead">
-              Complate extends Bootswatch by providing source code for components with higher complexity, built with combinations of those elements Bootswatch provides. So, Complate is <em>complately</em> compatible with Bootswatch and Bootstrap. Complate recommends using <a href="http://getbootstrap.com/css/#grid">grid system</a> of Bootstrap 3 in sizing and positioning your HTML elements.
+              Complate extends Bootstrap 3 and Bootswatch by providing source code for components with higher complexity, built with combinations of the elements they provides. So, Complate is <em>complately</em> compatible with Bootswatch and Bootstrap. Complate strongly recommends using <a href="http://getbootstrap.com/css/#grid" target="_blank">grid system</a> of Bootstrap 3 in sizing and positioning your HTML components.
             </p>
             <p class="lead">
               Complate mainly aims to support rapid web prototyping in computer science education for youths. Complate has been actively used by <a href="https://youthradio.org/" target="_blank">Youth Radio</a> where youths learn to build and contribute to digital publication of the media organization.
@@ -54,6 +88,12 @@
               </a>
               <a class="list-group-item" href="#choices">
                 Choices
+              </a>
+              <a class="list-group-item" href="#data-forms">
+                Data Forms
+              </a>
+              <a class="list-group-item" href="#data-fill-ins">
+                Data Fill-Ins
               </a>
             </div>
           </div>
@@ -88,14 +128,6 @@
                       </a>
                     </div>
                   </div>
-                  <!-- <script class="js" type="text/template">
-                    var hello = 'world';
-                  </script> -->
-                  <!-- <script class="doc" type="text/template">
-                    <div>
-                      <p>HaHaHa</p>
-                    </div>
-                  </script> -->
                 </div>
               </div>
 
@@ -229,7 +261,7 @@
                       <p>
                         You may want to size this component properly using Bootstrap's grid system. For example,
                       </p>
-                      <pre>class="sidebar sidebar-default col-lg-3 col-md-3"</pre>
+                      <pre>&lt;div class="sidebar sidebar-default col-lg-3 col-md-3"&gt;</pre>
                     </div>
                   </script>
                 </div>
@@ -269,7 +301,7 @@
                       <p>
                         You may want to size this component properly using Bootstrap's grid system. For example,
                       </p>
-                      <pre>class="sidebar sidebar-info col-lg-3 col-md-3"</pre>
+                      <pre>&lt;div class="sidebar sidebar-info col-lg-3 col-md-3"&gt;</pre>
                     </div>
                   </script>
                 </div>
@@ -309,7 +341,7 @@
                       <p>
                         You may want to size this component properly using Bootstrap's grid system. For example,
                       </p>
-                      <pre>class="sidebar sidebar-success col-lg-3 col-md-3"</pre>
+                      <pre>&lt;div class="sidebar sidebar-success col-lg-3 col-md-3"&gt;</pre>
                     </div>
                   </script>
                 </div>
@@ -349,7 +381,7 @@
                       <p>
                         You may want to size this component properly using Bootstrap's grid system. For example,
                       </p>
-                      <pre>class="sidebar sidebar-danger col-lg-3 col-md-3"</pre>
+                      <pre>&lt;div class="sidebar sidebar-danger col-lg-3 col-md-3"&gt;</pre>
                     </div>
                   </script>
                 </div>
@@ -389,7 +421,7 @@
                       <p>
                         You may want to size this component properly using Bootstrap's grid system. For example,
                       </p>
-                      <pre>class="sidebar sidebar-warning col-lg-3 col-md-3"</pre>
+                      <pre>&lt;div class="sidebar sidebar-warning col-lg-3 col-md-3"&gt;</pre>
                     </div>
                   </script>
                 </div>
@@ -617,6 +649,243 @@
       </div>
 
 
+
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <div class="page-header">
+              <h1 id="data-forms">Data Forms</h1>
+            </div>
+
+            <div class="row">
+              
+              <div class="col-lg-6 col-md-6">
+                <div class="bs-component">
+                  <form class="form-horizontal well">
+                    <fieldset>
+                      <legend>Legend</legend>
+                      <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control complate-data" data-name="email" id="inputEmail" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-10">
+                          <input type="password" class="form-control complate-data" data-name="myPassword" id="inputPassword" placeholder="Password">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="complate-data" data-name="checkbox1"> Checkbox 1
+                            </label>
+                            &emsp;
+                            <label>
+                              <input type="checkbox" class="complate-data" data-name="checkbox2"> Checkbox 2
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                        <div class="col-lg-10">
+                          <textarea class="form-control complate-data" data-name="longText" rows="3" id="textArea"></textarea>
+                          <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Radios</label>
+                        <div class="col-lg-10">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsGroup" class="complate-data" data-name="optionsGroup" value="option1">
+                              Option one is this
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsGroup" class="complate-data" data-name="optionsGroup" value="option2">
+                              Option two can be something else
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Selects</label>
+                        <div class="col-lg-10">
+                          <select class="form-control complate-data" data-name="dropdown" id="select">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="cow">Cow</option>
+                            <option value="pig">Pig</option>
+                            <option value="sheep">Sheep</option>
+                          </select>
+                          <br />
+                          <select multiple="" class="form-control complate-data" data-name="multipleSelects">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="cow">Cow</option>
+                            <option value="pig">Pig</option>
+                            <option value="sheep">Sheep</option>
+                          </select>
+                          <span class="help-block">You may select or deselect multiple items<br />while holding <kbd>ctrl</kbd> on Windows or <kbd>command</kbd> on Mac.</span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                          <button type="reset" class="btn btn-default">Cancel</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+
+                  <script class="js" type="text/template">
+                    // To retrive data from Complate storage
+                    alert(complate.data.email);
+                    alert(complate.data.myPassword);
+                    alert(complate.data.checkbox); // This gives you true or false.
+                    alert(complate.data.optionsGroup);
+                    console.log(complate.data.longText);
+                    console.log(complate.data.dropdown);
+                    console.log(complate.data.multipleSelect); // This gives you an array with multiple values.
+                  </script>
+
+                  <script class="doc" type="text/template">
+                    <div>
+                      <p>
+                        Data Forms have the same UI as <a href="https://bootswatch.com/default/#forms">Forms of Bootswatch</a> with additional functionality; Data Forms store user input so that you may retrieve the data using Javascript. This feature requires <strong>complate.js</strong>, so make sure you have loaded it. For example,
+                      </p>
+                      <pre>&lt;script src="https://gitcdn.xyz/repo/stlim0730/complate/master/js/complate.js"&gt;&lt;/script&gt;</pre>
+                      <p>
+                        To enable this data storage feature for an input element, the element must have <code>complate-data</code> in its <code>class</code> attribute as the HTML example shows above. Also, it must have <code>data-name</code> attribute to specify the <strong>unique</strong> name of the data. The unique name is used to retrive the data as shown in Javascript example above.
+                      </p>
+                      <p>
+                        Submit button is not required because each data value automatically updates as the user input changes. You may have the button as a general anchor link to a bookmark or a URL.
+                      </p>
+                    </div>
+                  </script>
+
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-6 col-md-6">
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label" for="focusedInput">Focused input</label>
+                    <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label" for="disabledInput">Disabled input</label>
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group has-warning">
+                    <label class="control-label" for="inputWarning">Input warning</label>
+                    <input type="text" class="form-control" id="inputWarning">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group has-error">
+                    <label class="control-label" for="inputError">Input error</label>
+                    <input type="text" class="form-control" id="inputError">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess">Input success</label>
+                    <input type="text" class="form-control" id="inputSuccess">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label" for="inputLarge">Large input</label>
+                    <input class="form-control input-lg" type="text" id="inputLarge">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label" for="inputDefault">Default input</label>
+                    <input type="text" class="form-control" id="inputDefault">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label" for="inputSmall">Small input</label>
+                    <input class="form-control input-sm" type="text" id="inputSmall">
+                  </div>
+                </div>
+
+                <div class="bs-component">
+                  <div class="form-group">
+                    <label class="control-label">Input addons</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Button</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="data-fill-ins">Data Fill-Ins</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="bs-component">
+              <h1 data-fill-in="firstPresident">
+                George Washington
+              </h1>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="bs-component">
+              <button class="btn btn-default" data-fill-in="secondPresident">John Adams</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="bs-component">
+              <p>
+                Lorem ipsum dolor sit amet, <span data-fill-in="thirdPresident" class="text-warning">Thomas Jefferson</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
       
       <div id="source-modal" class="modal fade">
         <div class="modal-dialog modal-lg">
@@ -662,6 +931,7 @@
     </div>
     
     <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/js.cookie.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/lodash.min.js"></script>
     <script src="./js/complate.js"></script>
